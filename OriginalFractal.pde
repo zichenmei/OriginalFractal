@@ -3,14 +3,15 @@ public void setup() {
 }
 public void draw() {
   noLoop();
-  rectangle(10,10,500);
+  rectangle(0,0,500, 500);
 }
-public void mouseDragged() {
-}
-public void rectangle(int x, int y, int rLength) {
-  rect(x,y,rLength,rLength);
-  if (rLength >10) {
+public void rectangle(int x, int y, int rLength, int rWidth) {
+  rect(x,y,rLength,rWidth);
+  if (rLength >1) {
     fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
-    rectangle(x,y,rLength-(int)(Math.random()*20));    
+    rect(x,y,rLength/2,rWidth/2);
+    rectangle(x+(rLength/2),y+(rLength/2),rLength/2,rWidth/2);  
+    rectangle(x+(rLength/2),y,rLength/2,rWidth/2); 
+    rectangle(x,y+(rLength/2),rLength/2,rWidth/2); 
   } 
-  }
+}
