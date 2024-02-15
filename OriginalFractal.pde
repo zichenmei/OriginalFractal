@@ -3,7 +3,7 @@ public void setup() {
 }
 public void draw() {
   noLoop();
-  rectangle(0,0,500);
+  rectangle(10,10,500);
 }
 public void mouseDragged() {
 }
